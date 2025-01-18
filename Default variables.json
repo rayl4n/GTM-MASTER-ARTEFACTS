@@ -1,0 +1,803 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-01-18 00:58:22",
+    "containerVersion": {
+        "path": "accounts/315511/containers/6831713/versions/0",
+        "accountId": "315511",
+        "containerId": "6831713",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/315511/containers/6831713",
+            "accountId": "315511",
+            "containerId": "6831713",
+            "name": "academiadetrackeamento.com.br - WEB",
+            "publicId": "GTM-XXXXX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1736864534284",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/315511/containers/6831713/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-XXXXX"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "tagId": "245",
+                "name": "🟤 | [cHTML] SetCookie's userData",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function() {\n\n    function setCookie(cookieName, cookieValue) {\n        var expirationTime = 31560000;\n        expirationTime = expirationTime * 1000; // Converte expirationtime para milissegundos\n        var date = new Date(); \n        var dateTimeNow = date.getTime(); \n      \n        date.setTime(dateTimeNow + expirationTime);\n        var expirationDate = date.toUTCString();\n        \n        document.cookie = cookieName + \"=\" + cookieValue + \"; SameSite=None; Secure; expires=\" + expirationDate + \"; path=/; domain=.{{0 | domínio}}\";\n    }\n  \n    var cookiesData = {\n        'em': '{{jsc | [] email}}',\n        'ph': '{{jsc | # phone}}',\n        'fn': '{{jsc | # first name}}',\n        'ln': '{{jsc | # last name}}',\n        'zp': '{{jsc | [] zipcode}}'\n    };\n    for (var name in cookiesData) {\n        setCookie(name, cookiesData[name]);\n    }\n\n})();\n\n</script>\n"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1737045561975",
+                "parentFolderId": "223",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "224",
+                "name": "00 | Facebook Ads",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1737045327154",
+                "parentFolderId": "221",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "225",
+                "name": "0 | Google Analytics 4",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-"
+                    }
+                ],
+                "fingerprint": "1737045357065",
+                "parentFolderId": "222",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "226",
+                "name": "cookie | _fbp",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "_fbp"
+                    }
+                ],
+                "fingerprint": "1737045561979",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "227",
+                "name": "cookie | _fbc",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "_fbc"
+                    }
+                ],
+                "fingerprint": "1737045561979",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "228",
+                "name": "cookie | _ga",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "_ga"
+                    }
+                ],
+                "fingerprint": "1737045562008",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "229",
+                "name": "jsc | External ID",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  return {{cookie | _ga}}.slice(6);\n}"
+                    }
+                ],
+                "fingerprint": "1737045562008",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "230",
+                "name": "jsc | [] email",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector('[name=\"email\"]');\n  return name.value;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562009",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "231",
+                "name": "jsc | [] name",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector('[name=\"name\"]') || document.querySelector(\"#client-first-name\");\n  return name.value;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562009",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "241",
+                "name": "jsc | # phone",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector(\"#client-phone\");\n  var phoneNumber = name.value;\n\n  if (!phoneNumber) {\n    return '';\n  }\n\n  phoneNumber = phoneNumber.replace(/\\s/g, '').replace(/-/g, '').replace(/\\(|\\)/g, '').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');\n\n  if (phoneNumber.startsWith('0')) {\n    phoneNumber = phoneNumber.substring(1);\n  }\n\n  if (phoneNumber.startsWith('55') || phoneNumber.startsWith('+55')) {\n    phoneNumber = phoneNumber.replace(/^55(0\\d+)/, '55$1');\n  } else {\n    phoneNumber = '55' + phoneNumber;\n  }\n\n  return phoneNumber;\n}\n"
+                    }
+                ],
+                "fingerprint": "1737045562009",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "242",
+                "name": "cookie | fn",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "fn"
+                    }
+                ],
+                "fingerprint": "1737045562009",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "243",
+                "name": "cookie | em",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "em"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "244",
+                "name": "cookie | ph",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ph"
+                    }
+                ],
+                "fingerprint": "1737045562009",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "246",
+                "name": "cookie | ln",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ln"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "248",
+                "name": "cookie | zp",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "zp"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "249",
+                "name": "0 | domínio",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "academiadetrackeamento.com.br"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "250",
+                "name": "jsc | if-else email (jsc / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{jsc | [] email}}) { var el={{jsc | [] email}}}\n    else { var el ={{cookie | em}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "251",
+                "name": "jsc | if-else phone (jsc / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{jsc | # phone}}) { var el={{jsc | # phone}}}\n    else { var el ={{cookie | ph}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "252",
+                "name": "jsc | if-else first name (jsc / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{jsc | # first name}}) { var el={{jsc | # first name}}}\n    else { var el ={{cookie | fn}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "253",
+                "name": "jsc | if-else last name (jsc / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{jsc | # last name}}) { var el={{jsc | # last name}}}\n    else { var el ={{cookie | ln}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "254",
+                "name": "jsc | if-else zip code (jsc / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{jsc | [] zipcode}}) { var el={{jsc | [] zipcode}}}\n    else { var el ={{cookie | zp}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562010",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "259",
+                "name": "cookie | ct",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ct"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "260",
+                "name": "cookie | st",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "st"
+                    }
+                ],
+                "fingerprint": "1737045562011",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "261",
+                "name": "cookie | ip",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ip"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "262",
+                "name": "cookie | cn",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cn"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "263",
+                "name": "jsc | if-else city (dlv / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{dlv | visitorApiCity}}) { var el={{dlv | visitorApiCity}}}\n    else { var el ={{cookie | ct}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "264",
+                "name": "jsc | if-else state (dlv / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{dlv | visitorApiRegion}}) { var el={{dlv | visitorApiRegion}}}\n    else { var el ={{cookie | st}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "265",
+                "name": "jsc | if-else ipAdress (dlv / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{dlv | visitorApiIpAddress}}) { var el={{dlv | visitorApiIpAddress}}}\n    else { var el ={{cookie | ip}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562013",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "266",
+                "name": "jsc | if-else country (dlv / cookie)",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  if ({{dlv | visitorApiCountryCode}}) { var el={{dlv | visitorApiCountryCode}}}\n    else { var el ={{cookie | cn}}}\n    return el;\n}"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "267",
+                "name": "API Event ID",
+                "type": "cvt_6831713_219",
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "280",
+                "name": "url | gclid",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "gclid"
+                    }
+                ],
+                "fingerprint": "1737045562012",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "281",
+                "name": "not set",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "not set"
+                    }
+                ],
+                "fingerprint": "1737045562013",
+                "parentFolderId": "223",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "282",
+                "name": "[GOOGLE] userData Provided",
+                "type": "awec",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "mode",
+                        "value": "MANUAL"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "country",
+                        "value": "{{jsc | if-else country (dlv / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "city",
+                        "value": "{{jsc | if-else city (dlv / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "street",
+                        "value": "{{not set}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "last_name",
+                        "value": "{{jsc | if-else last name (jsc / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "phone_number",
+                        "value": "{{jsc | if-else phone (jsc / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "region",
+                        "value": "{{jsc | if-else state (dlv / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "postal_code",
+                        "value": "{{jsc | if-else zip code (jsc / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "first_name",
+                        "value": "{{jsc | if-else first name (jsc / cookie)}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "email",
+                        "value": "{{jsc | if-else email (jsc / cookie)}}"
+                    }
+                ],
+                "fingerprint": "1737045357065",
+                "parentFolderId": "222",
+                "formatValue": {}
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "294",
+                "name": "00 | Google Ads",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "727821206"
+                    }
+                ],
+                "fingerprint": "1737045357066",
+                "parentFolderId": "222",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "folderId": "221",
+                "name": "Facebook",
+                "fingerprint": "1736942178980"
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "folderId": "222",
+                "name": "Google",
+                "fingerprint": "1736942182214"
+            },
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "folderId": "223",
+                "name": "Integrações",
+                "fingerprint": "1736942188154"
+            }
+        ],
+        "fingerprint": "1737161902109",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/315511/containers/6831713/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "templateId": "219",
+                "name": "Unique Event ID",
+                "fingerprint": "1736942156658",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Unique Event ID\",\n  \"description\": \"Generates unique event id\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"containerContexts\": [\n    \"WEB\"\n  ],\n  \"brand\": {\n    \"displayName\": \"stape-io\",\n    \"id\": \"github.com_stape-io\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst copyFromDataLayer = require('copyFromDataLayer');\nconst setInWindow = require('setInWindow');\nconst copyFromWindow = require('copyFromWindow');\nconst getTimestampMillis = require('getTimestampMillis');\nconst generateRandom = require('generateRandom');\n\n\nreturn getBrowserId() + '_' + getPageLoadId() + getGtmUniqueEventId();\n\nfunction getGtmUniqueEventId() {\n    let gtmId = copyFromDataLayer('gtm.uniqueEventId')  || 0;\n    return gtmId >= 0 ? gtmId : '00';\n}\n\nfunction getBrowserId() {\n    let gtmBrowserId =  copyFromWindow('gtmBrowserId');\n\n    if (!gtmBrowserId) {\n        gtmBrowserId = getTimestampMillis() + generateRandom(100000, 999999);\n        setInWindow('gtmBrowserId', gtmBrowserId, false);\n    }\n\n    return gtmBrowserId;\n}\n\nfunction getPageLoadId() {\n  let eventId = copyFromWindow('gtmPageLoadId');\n\n  if (!eventId) {\n    eventId = getTimestampMillis() + generateRandom(100000, 999999);\n    setInWindow('gtmPageLoadId', eventId, false);\n  }\n\n  return eventId;\n}\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_data_layer\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedKeys\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"specific\"\n          }\n        },\n        {\n          \"key\": \"keyPatterns\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"gtm.uniqueEventId\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"gtmPageLoadId\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"gtmBrowserId\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios: []\n\n\n___NOTES___\n\nCreated on 11/03/2021, 11:05:32\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "stape-io",
+                    "repository": "unique-event-id-variable",
+                    "version": "76498f16f1954b0286640d19eb6a1ddf2909e183",
+                    "signature": "5db6da902483d707bdbc159bd82985f8d41e38d1f6f2609d774407279284a8d8"
+                }
+            }
+        ]
+    }
+}
