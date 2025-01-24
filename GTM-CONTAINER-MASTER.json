@@ -251,25 +251,6 @@
             {
                 "accountId": "315511",
                 "containerId": "6831713",
-                "variableId": "254",
-                "name": "jsc | if-else zip code (jsc / cookie)",
-                "type": "jsm",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function () {\n  if ({{jsc | [] zipcode}}) { var el={{jsc | [] zipcode}}}\n    else { var el ={{cookie | zp}}}\n    return el;\n}"
-                    }
-                ],
-                "fingerprint": "1737045562010",
-                "parentFolderId": "223",
-                "formatValue": {
-                    "caseConversionType": "LOWERCASE"
-                }
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
                 "variableId": "263",
                 "name": "jsc | if-else city (dlv / cookie)",
                 "type": "jsm",
@@ -470,7 +451,7 @@
                 "fingerprint": "1737045357066",
                 "parentFolderId": "222",
                 "formatValue": {}
-            }
+            },
             {
                 "accountId": "315511",
                 "containerId": "6831713",
