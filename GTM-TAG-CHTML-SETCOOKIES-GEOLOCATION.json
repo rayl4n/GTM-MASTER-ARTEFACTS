@@ -1,0 +1,193 @@
+{
+    "exportFormatVersion": 2,
+    "containerVersion": {
+        "container": {
+            "usageContext": [
+                "WEB"
+            ],
+        },
+        "tag": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "tagId": "174",
+                "name": "🟤 | [cHTML] SetCookie's geolocation",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function() {\n\n    function setCookie(cookieName, cookieValue) {\n        var expirationTime = 31560000;\n        expirationTime = expirationTime * 1000; // Converte expirationtime para milissegundos\n        var date = new Date(); \n        var dateTimeNow = date.getTime(); \n      \n        date.setTime(dateTimeNow + expirationTime);\n        var expirationDate = date.toUTCString();\n        \n        document.cookie = cookieName + \"=\" + cookieValue + \"; SameSite=None; Secure; expires=\" + expirationDate + \"; path=/; domain=.{{0 | domínio}}\";\n    }\n  \n    var cookiesData = {\n        'ct': '{{jsc | Cidade formato facebook}}',\n        'st': '{{dlv | visitorApiRegion}}',\n        'ip': '{{dlv | visitorApiIpAddress}}',\n        'cn': '{{dlv | visitorApiCountryCode}}'\n    };\n    for (var name in cookiesData) {\n        setCookie(name, cookiesData[name]);\n    }\n\n})();\n\n</script>\n"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1737724375731",
+                "firingTriggerId": [
+                    "173"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "triggerId": "173",
+                "name": "visitor-api-success",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "visitor-api-success"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1737724354690"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "168",
+                "name": "dlv | visitorApiCity",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "visitorApiCity"
+                    }
+                ],
+                "fingerprint": "1737723842774",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "169",
+                "name": "dlv | visitorApiCountryCode",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "visitorApiCountryCode"
+                    }
+                ],
+                "fingerprint": "1737723858294",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "170",
+                "name": "dlv | visitorApiIpAddress",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "visitorApiIpAddress"
+                    }
+                ],
+                "fingerprint": "1737723880538",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "171",
+                "name": "dlv | visitorApiRegion",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "visitorApiRegion"
+                    }
+                ],
+                "fingerprint": "1737723901015",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "172",
+                "name": "jsc | Cidade formato facebook",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var entrada = \"{{dlv | visitorApiCity}}\";\n\n  return entrada.normalize('NFD')\n    .replace(/[\\u0300-\\u036f]/g, '')\n    .replace(/\\s/g, '');\n}\n"
+                    }
+                ],
+                "fingerprint": "1737724251637",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            }
+        ],
+    }
+}

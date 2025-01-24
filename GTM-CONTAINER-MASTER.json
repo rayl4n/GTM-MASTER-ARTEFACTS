@@ -37,36 +37,6 @@
                 "GTM-XXXXX"
             ]
         },
-        "tag": [
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "tagId": "245",
-                "name": "🟤 | [cHTML] SetCookie's userData",
-                "type": "html",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "html",
-                        "value": "<script>\n(function() {\n\n    function setCookie(cookieName, cookieValue) {\n        var expirationTime = 31560000;\n        expirationTime = expirationTime * 1000; // Converte expirationtime para milissegundos\n        var date = new Date(); \n        var dateTimeNow = date.getTime(); \n      \n        date.setTime(dateTimeNow + expirationTime);\n        var expirationDate = date.toUTCString();\n        \n        document.cookie = cookieName + \"=\" + cookieValue + \"; SameSite=None; Secure; expires=\" + expirationDate + \"; path=/; domain=.{{0 | domínio}}\";\n    }\n  \n    var cookiesData = {\n        'em': '{{jsc | [] email}}',\n        'ph': '{{jsc | # phone}}',\n        'fn': '{{jsc | # first name}}',\n        'ln': '{{jsc | # last name}}',\n        'zp': '{{jsc | [] zipcode}}'\n    };\n    for (var name in cookiesData) {\n        setCookie(name, cookiesData[name]);\n    }\n\n})();\n\n</script>\n"
-                    },
-                    {
-                        "type": "BOOLEAN",
-                        "key": "supportDocumentWrite",
-                        "value": "false"
-                    }
-                ],
-                "fingerprint": "1737045561975",
-                "parentFolderId": "223",
-                "tagFiringOption": "ONCE_PER_EVENT",
-                "monitoringMetadata": {
-                    "type": "MAP"
-                },
-                "consentSettings": {
-                    "consentStatus": "NOT_SET"
-                }
-            }
-        ],
         "variable": [
             {
                 "accountId": "315511",
@@ -78,7 +48,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "000000000"
+                        "value": "0000000000000"
                     }
                 ],
                 "fingerprint": "1737045327154",
@@ -188,173 +158,6 @@
             {
                 "accountId": "315511",
                 "containerId": "6831713",
-                "variableId": "230",
-                "name": "jsc | [] email",
-                "type": "jsm",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function () {\n  var name = document.querySelector('[name=\"email\"]');\n  return name.value;\n}"
-                    }
-                ],
-                "fingerprint": "1737045562009",
-                "parentFolderId": "223",
-                "formatValue": {
-                    "caseConversionType": "LOWERCASE"
-                }
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "231",
-                "name": "jsc | [] name",
-                "type": "jsm",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function () {\n  var name = document.querySelector('[name=\"name\"]') || document.querySelector(\"#client-first-name\");\n  return name.value;\n}"
-                    }
-                ],
-                "fingerprint": "1737045562009",
-                "parentFolderId": "223",
-                "formatValue": {
-                    "caseConversionType": "LOWERCASE"
-                }
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "241",
-                "name": "jsc | # phone",
-                "type": "jsm",
-                "parameter": [
-                    {
-                        "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function () {\n  var name = document.querySelector(\"#client-phone\");\n  var phoneNumber = name.value;\n\n  if (!phoneNumber) {\n    return '';\n  }\n\n  phoneNumber = phoneNumber.replace(/\\s/g, '').replace(/-/g, '').replace(/\\(|\\)/g, '').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');\n\n  if (phoneNumber.startsWith('0')) {\n    phoneNumber = phoneNumber.substring(1);\n  }\n\n  if (phoneNumber.startsWith('55') || phoneNumber.startsWith('+55')) {\n    phoneNumber = phoneNumber.replace(/^55(0\\d+)/, '55$1');\n  } else {\n    phoneNumber = '55' + phoneNumber;\n  }\n\n  return phoneNumber;\n}\n"
-                    }
-                ],
-                "fingerprint": "1737045562009",
-                "parentFolderId": "223",
-                "formatValue": {
-                    "caseConversionType": "LOWERCASE"
-                }
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "242",
-                "name": "cookie | fn",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "fn"
-                    }
-                ],
-                "fingerprint": "1737045562009",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "243",
-                "name": "cookie | em",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "em"
-                    }
-                ],
-                "fingerprint": "1737045562010",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "244",
-                "name": "cookie | ph",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "ph"
-                    }
-                ],
-                "fingerprint": "1737045562009",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "246",
-                "name": "cookie | ln",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "ln"
-                    }
-                ],
-                "fingerprint": "1737045562010",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "248",
-                "name": "cookie | zp",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "zp"
-                    }
-                ],
-                "fingerprint": "1737045562010",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
                 "variableId": "249",
                 "name": "0 | domínio",
                 "type": "c",
@@ -417,7 +220,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "javascript",
-                        "value": "function () {\n  if ({{jsc | # first name}}) { var el={{jsc | # first name}}}\n    else { var el ={{cookie | fn}}}\n    return el;\n}"
+                        "value": "function () {\n  if () { var el=}\n    else { var el ={{cookie | fn}}}\n    return el;\n}"
                     }
                 ],
                 "fingerprint": "1737045562010",
@@ -436,7 +239,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "javascript",
-                        "value": "function () {\n  if ({{jsc | # last name}}) { var el={{jsc | # last name}}}\n    else { var el ={{cookie | ln}}}\n    return el;\n}"
+                        "value": "function () {\n  if () { var el=}\n    else { var el ={{cookie | ln}}}\n    return el;\n}"
                     }
                 ],
                 "fingerprint": "1737045562010",
@@ -467,94 +270,6 @@
             {
                 "accountId": "315511",
                 "containerId": "6831713",
-                "variableId": "259",
-                "name": "cookie | ct",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "ct"
-                    }
-                ],
-                "fingerprint": "1737045562012",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "260",
-                "name": "cookie | st",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "st"
-                    }
-                ],
-                "fingerprint": "1737045562011",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "261",
-                "name": "cookie | ip",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "ip"
-                    }
-                ],
-                "fingerprint": "1737045562012",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
-                "variableId": "262",
-                "name": "cookie | cn",
-                "type": "k",
-                "parameter": [
-                    {
-                        "type": "BOOLEAN",
-                        "key": "decodeCookie",
-                        "value": "false"
-                    },
-                    {
-                        "type": "TEMPLATE",
-                        "key": "name",
-                        "value": "cn"
-                    }
-                ],
-                "fingerprint": "1737045562012",
-                "parentFolderId": "223",
-                "formatValue": {}
-            },
-            {
-                "accountId": "315511",
-                "containerId": "6831713",
                 "variableId": "263",
                 "name": "jsc | if-else city (dlv / cookie)",
                 "type": "jsm",
@@ -562,7 +277,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "javascript",
-                        "value": "function () {\n  if ({{dlv | visitorApiCity}}) { var el={{dlv | visitorApiCity}}}\n    else { var el ={{cookie | ct}}}\n    return el;\n}"
+                        "value": "function () {\n  if ({{jsc | Cidade formato facebook}}) { var el={{jsc | Cidade formato facebook}}}\n    else { var el ={{cookie | ct}}}\n    return el;\n}"
                     }
                 ],
                 "fingerprint": "1737045562012",
@@ -664,13 +379,13 @@
                 "accountId": "315511",
                 "containerId": "6831713",
                 "variableId": "281",
-                "name": "not set",
+                "name": "undefined",
                 "type": "c",
                 "parameter": [
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "not set"
+                        "value": "undefined"
                     }
                 ],
                 "fingerprint": "1737045562013",
@@ -702,7 +417,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "street",
-                        "value": "{{not set}}"
+                        "value": "{{undefined}}"
                     },
                     {
                         "type": "TEMPLATE",
@@ -743,13 +458,30 @@
                 "accountId": "315511",
                 "containerId": "6831713",
                 "variableId": "294",
+                "name": "01 | Google Ads - Purchase",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "000000000"
+                    }
+                ],
+                "fingerprint": "1737045357066",
+                "parentFolderId": "222",
+                "formatValue": {}
+            }
+            {
+                "accountId": "315511",
+                "containerId": "6831713",
+                "variableId": "294",
                 "name": "00 | Google Ads",
                 "type": "c",
                 "parameter": [
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "727821206"
+                        "value": "000000000"
                     }
                 ],
                 "fingerprint": "1737045357066",
@@ -780,8 +512,6 @@
                 "fingerprint": "1736942188154"
             }
         ],
-        "fingerprint": "1737161902109",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/315511/containers/6831713/versions/0?apiLink=version",
         "customTemplate": [
             {
                 "accountId": "315511",

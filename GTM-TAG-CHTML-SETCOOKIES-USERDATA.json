@@ -1,0 +1,316 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-01-24 13:44:11",
+    "containerVersion": {
+        "path": "accounts/6000740114/containers/30845738/versions/0",
+        "accountId": "6000740114",
+        "containerId": "30845738",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6000740114/containers/30845738",
+            "accountId": "6000740114",
+            "containerId": "30845738",
+            "name": "vscintos.com.br - WEB",
+            "publicId": "GTM-K696FRF",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1730465555838",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000740114/containers/30845738/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-K696FRF"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "tagId": "175",
+                "name": "🟤 | [cHTML] SetCookies userData",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n(function() {\n\n    function setCookie(cookieName, cookieValue) {\n        var expirationTime = 31560000;\n        expirationTime = expirationTime * 1000;\n        var date = new Date(); \n        var dateTimeNow = date.getTime(); \n      \n        date.setTime(dateTimeNow + expirationTime);\n        var expirationDate = date.toUTCString();\n        \n        document.cookie = cookieName + \"=\" + cookieValue + \"; SameSite=None; Secure; expires=\" + expirationDate + \"; path=/; domain=.{{0 | domínio}}\";\n    }\n  \n    var cookiesData = {\n        'em': '{{jsc | [] email}}',      \n        'ph': '{{jsc | [] phone}}',  \n        'fn': '{{jsc | [] first name}}', \n        'ln': '{{jsc | [] last name}}'  \n    };\n    for (var name in cookiesData) {\n        setCookie(name, cookiesData[name]);\n    }\n\n})();\n\n</script>\n"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1737726204341",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "133",
+                "name": "cookie | fn",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "fn"
+                    }
+                ],
+                "fingerprint": "1737723759345",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "135",
+                "name": "cookie | ph",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ph"
+                    }
+                ],
+                "fingerprint": "1737723759345",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "136",
+                "name": "jsc | # email",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector(\"#email\");\n  return name.value;\n}"
+                    }
+                ],
+                "fingerprint": "1737725871998",
+                "parentFolderId": "14",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "137",
+                "name": "cookie | em",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "em"
+                    }
+                ],
+                "fingerprint": "1737723759345",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "141",
+                "name": "cookie | ln",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ln"
+                    }
+                ],
+                "fingerprint": "1737723759345",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "143",
+                "name": "jsc | # phone",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector(\"#client-phone\");\n  var phoneNumber = name.value;\n\n  if (!phoneNumber) {\n    return '';\n  }\n\n  phoneNumber = phoneNumber.replace(/\\s/g, '').replace(/-/g, '').replace(/\\(|\\)/g, '').normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');\n\n  if (phoneNumber.startsWith('0')) {\n    phoneNumber = phoneNumber.substring(1);\n  }\n\n  if (phoneNumber.startsWith('55') || phoneNumber.startsWith('+55')) {\n    phoneNumber = phoneNumber.replace(/^55(0\\d+)/, '55$1');\n  } else {\n    phoneNumber = '55' + phoneNumber;\n  }\n\n  return phoneNumber;\n}\n"
+                    }
+                ],
+                "fingerprint": "1737723759346",
+                "parentFolderId": "14",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "146",
+                "name": "cookie | ip",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ip"
+                    }
+                ],
+                "fingerprint": "1737723759346",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "148",
+                "name": "cookie | cn",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cn"
+                    }
+                ],
+                "fingerprint": "1737723759346",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "150",
+                "name": "cookie | ct",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ct"
+                    }
+                ],
+                "fingerprint": "1737723759346",
+                "parentFolderId": "14",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "155",
+                "name": "jsc | # fullname",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function () {\n  var name = document.querySelector(\"#fullname\");\n  return name.value;\n}"
+                    }
+                ],
+                "fingerprint": "1737725912288",
+                "parentFolderId": "14",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "variableId": "162",
+                "name": "cookie | st",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "st"
+                    }
+                ],
+                "fingerprint": "1737723759350",
+                "parentFolderId": "14",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6000740114",
+                "containerId": "30845738",
+                "folderId": "14",
+                "name": "Integrações",
+                "fingerprint": "1731415812739"
+            }
+        ],
+        "fingerprint": "1737726251886",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000740114/containers/30845738/versions/0?apiLink=version"
+    }
+}
