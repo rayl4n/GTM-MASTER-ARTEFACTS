@@ -4,7 +4,7 @@
         "container": {
             "usageContext": [
                 "WEB"
-            ],
+            ]
         },
         "tag": [
             {
@@ -188,6 +188,6 @@
                     "caseConversionType": "LOWERCASE"
                 }
             }
-        ],
+        ]
     }
 }
